@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{everything.name}} Panel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="icon" href="Images/logo_edit.png" type="image/icon type">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="css/{{everything.omc}}" rel="stylesheet">
+    <link href="css/{{everything.tmc}}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/{{everything.bmc}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/{{everything.stc}}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-info position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+
+
+
+        <!-- ----------- HORIZONTAL NAVIGATION BAR      S T A R T  -->
+
+
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar navbar-dark">
+
+
+
+
+
+
+                <!-- -----------------   Profile   S T A R T ------------------ -->
+
+                <a href="/admin_sub_interface" class=" navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Team 8</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="/Images/{{everything.image}}" alt=""
+                            style="width: 40px; height: 40px;">
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">{{everything.name}}</h6>
+                        <span>{{everything.desig}}</span>
+                    </div>
+                </div>
+
+                <!-- ---------------   Profile     E  N  D  ------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- ----------- LEFT SIDE OPTIONS     S T A R T  -->
+
+                <div class="navbar-nav w-100">
+
+                    <a href="/admin_sub_interface" class="nav-item nav-link"><i
+                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+
+
+                    <div class="nav-item dropdown">
+
+                        <a href="/admin_sub_interface" class="nav-link dropdown-toggle active"
+                            data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>User Status</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/admin_users_active" class="dropdown-item">Active Users</a>
+
+                            <a href="/admin_users_waiting" class="dropdown-item active">Waiting Users</a>
+
+                            <a href="/admin_users_blocked" class="dropdown-item">Blocked Users</a>
+
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-envelope me-lg-2"></i>Messages</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/admin_reports" class="dropdown-item">Reports</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="far fa-file-alt me-2"></i>Courses</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="/admin_course_add" class="dropdown-item">Add Course</a>
+
+                            <a href="/admin_course_remove" class="dropdown-item">Remove Course</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <!-- ----------- LEFT SIDE OPTIONS     E  N  D   --------- -->
+
+
+
+
+
+
+            </nav>
+        </div>
+
+
+        <!-- -----------    HORIZONTAL NAVIGATION BAR     E  N  D     - ------ -->
+
+
+
+
+
+
+        <div class="content">
+
+
+            <!-- -------------     TOP NAVIGATION BAR     S T A R T  ------------  -->
+
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="/admin_sub_interface" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="/admin_sub_interface" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="navbar-nav align-items-center ms-auto">
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="Images/{{everything.image}}" alt=""
+                                style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{everything.name}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/visit_again" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- -------------     TOP NAVIGATION BAR    E  N  D  S  ------------  -->
+
+            <!-- Navbar End -->
+
+
+
+
+
+            <!-----------------------   TABLE START    -------------------->
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+
+
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="widgetcolor rounded h-100 p-4">
+                            <h6 class="mx-3 text-dark">Waiting Users</h6>
+                            <div align="right">
+
+                                {{!-- block modal trigger --}}
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#block">
+                                    Block
+                                </button>
+
+                                {{!-- block modal --}}
+                                <div class="modal fade" id="block" tabindex="-1" aria-labelledby="block"
+                                    aria-hidden="true" style="padding-top:50px;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" style="background-color: #05386b;opacity: 0.9;">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="exampleModalLabel">Enter Email:
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form action="/block" method="POST">
+                                                <div class="modal-footer" style="justify-content: flex-start;">
+
+                                                    <input type="email" name="email" placeholder="abc@gmail.com"
+                                                        style="width: 100%;">
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary btn-block mb-4">
+                                                        Block
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{!-- active modal trigger --}}
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#active">
+                                    Active
+                                </button>
+
+                                {{!-- active modal --}}
+                                <div class="modal fade" id="active" tabindex="-1" aria-labelledby="active"
+                                    aria-hidden="true" style="padding-top:50px;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" style="background-color: #05386b;opacity: 0.9;">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="exampleModalLabel">Enter Email:
+                                                </h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form action="/active" method="POST">
+                                                <div class="modal-footer" style="justify-content: flex-start;">
+
+                                                    <input type="email" name="email" placeholder="abc@gmail.com"
+                                                        style="width: 100%;">
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary btn-block mb-4">
+                                                        Active
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">S.No</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Email Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each data}}
+                                    <tr>
+                                        <th scope="row">{{@index}}</th>
+                                        <td>{{f_name}}</td>
+                                        <td>{{l_name}}</td>
+                                        <td>{{email}}</td>
+                                        <td>{{status}}</td>
+                                        <td>{{created}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+
+                            
+                            <div align="right">
+                                <form action="/active_all" method="POST">
+                                    <button type="submit" class="btn btn-primary">
+                                        Active All
+                                    </button>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-----------------------   TABLE   END   --------------------->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Career Guidance</a>, All Right Reserved.
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="/admin_sub_interface">Team 8</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
+
+
+
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/{{everything.chj}}"></script>
+    <script src="js/{{everything.eaj}}"></script>
+    <script src="js/{{everything.waj}}"></script>
+    <script src="js/{{everything.owj}}"></script>
+    <script src="js/{{everything.moj}}"></script>
+    <script src="js/{{everything.mtj}}"></script>
+    <script src="js/{{everything.tej}}"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/{{everything.maj}}"></script>
+</body>
+
+</html>

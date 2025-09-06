@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{name}} Panel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="icon" href="Images/logo_edit.png" type="image/icon type">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="css/{{omc}}" rel="stylesheet">
+    <link href="css/{{tmc}}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/{{bmc}}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/{{stc}}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-info position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ----------- HORIZONTAL NAVIGATION BAR      S T A R T  -->
+
+
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar navbar-dark">
+
+
+
+
+
+
+                <!-- -----------------   Profile   S T A R T ------------------ -->
+
+                <a href="/admin_sub_interface" class=" navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Team 8</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="/Images/{{image}}" alt="" style="width: 40px; height: 40px;">
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">{{name}}</h6>
+                        <span>{{desig}}</span>
+                    </div>
+                </div>
+
+                <!-- ---------------   Profile     E  N  D  ------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- ----------- LEFT SIDE OPTIONS     S T A R T  -->
+
+                <div class="navbar-nav w-100">
+
+                    <a href="/admin_sub_interface" class="nav-item nav-link active "><i
+                            class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+
+
+                    <div class="nav-item dropdown">
+
+                        <a href="/admin_sub_interface" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i
+                                class="fa fa-laptop me-2"></i>User Status</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/admin_users_active" class="dropdown-item">Active Users</a>
+
+                            <a href="/admin_users_waiting" class="dropdown-item">Waiting Users</a>
+
+                            <a href="/admin_users_blocked" class="dropdown-item">Blocked Users</a>
+
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-envelope me-lg-2"></i>Messages</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/admin_reports" class="dropdown-item">Reports</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="far fa-file-alt me-2"></i>Courses</a>
+
+                        <div class="dropdown-menu bg-transparent border-0">
+
+                            <a href="/admin_course_add" class="dropdown-item">Add Course</a>
+
+                            <a href="/admin_course_remove" class="dropdown-item">Remove Course</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ----------- LEFT SIDE OPTIONS     E  N  D   --------- -->
+
+
+
+
+
+
+            </nav>
+        </div>
+
+
+        <!-- -----------    HORIZONTAL NAVIGATION BAR     E  N  D     - ------ -->
+
+
+
+
+
+
+
+
+
+
+
+        <div class="content">
+
+
+            <!-- -------------     TOP NAVIGATION BAR     S T A R T  ------------  -->
+
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="/admin_sub_interface" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="/admin_sub_interface" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="navbar-nav align-items-center ms-auto">
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="Images/{{image}}" alt=""
+                                style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{name}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="/visit_again" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- -------------     TOP NAVIGATION BAR    E  N  D  S  ------------  -->
+
+            <!-- Navbar End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+
+
+
+                    <!------------------  CALENDER     S T A R T   ----------------->
+
+
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 widgetcolor rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0 text-dark">Calender</h6>
+                            </div>
+                            <div id="calender"></div>
+                        </div>
+                    </div>
+
+
+                    <!------------------  CALENDER     E  N  D   ----------------->
+
+
+
+
+
+
+
+                    <!------------------  CO-ADMINS     S T A R T   ----------------->
+
+
+                    <div class="col-sm-12 col-xl-8">
+                        <div class="widgetcolor rounded h-100 p-4">
+                            <h6 class="mb-4 text-dark">Co-admins</h6>
+                            <div class="owl-carousel testimonial-carousel">
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/testimonial-2.jpg"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Rahman</h5>
+                                    <p>Team-Leader</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/testimonial-2.jpg"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Rehaan</h5>
+                                    <p>Ex-Creator</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/kalyani.jpg"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Kalyani</h5>
+                                    <p>Team-Member</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/testimonial-2.jpg"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Avaneesh</h5>
+                                    <p>Team-Member</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/sohail.png"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Sohail</h5>
+                                    <p>Team-Member</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="Images/testimonial-2.jpg"
+                                        style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1 text-dark">Srikar</h5>
+                                    <p>Team-Member</p>
+                                    <p class="mb-0">Student of Govt Polytechnic College Masabtank</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------------  CO-ADMINS     E  N  D   ----------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!------------------  MAP     S T A R T    ----------------->
+
+
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="widgetcolor rounded h-100 p-3">
+                            <iframe class="position-relative rounded w-100 h-100"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3807.188752368461!2d78.45482691966502!3d17.402727068108454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97232744622b%3A0x712b110df3c102d5!2sGovernment%20Polytechnic!5e0!3m2!1sen!2sus!4v1661087225540!5m2!1sen!2sus"
+                                frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"
+                                style="filter: grayscale(50%) invert(92%) contrast(53%); border: 0;"></iframe>
+                        </div>
+                    </div>
+
+
+                    <!------------------  MAP     E  N  D   ----------------->
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Career Guidance</a>, All Right Reserved.
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="/admin_sub_interface">Team 8</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
+
+
+
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+    </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/{{chj}}"></script>
+    <script src="js/{{eaj}}"></script>
+    <script src="js/{{waj}}"></script>
+    <script src="js/{{owj}}"></script>
+    <script src="js/{{moj}}"></script>
+    <script src="js/{{mtj}}"></script>
+    <script src="js/{{tej}}"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/{{maj}}"></script>
+</body>
+
+</html>

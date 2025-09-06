@@ -1,0 +1,281 @@
+<!--Design by foolishdeveloper.com-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="icon" href="Images/logo_edit.png" type="image/icon type">
+
+
+    <title>User Sign Up</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            background: url("http://driving-tests.org/wp-content/uploads/2012/03/night-road.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 1100px;
+
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            background-size: cover;
+
+
+
+
+        }
+
+        .content {
+            width: 85%;
+
+            border-radius: 10px;
+            padding: 40px 30px;
+            margin-top: 50px;
+            box-shadow: -3px -3px 9px #aaa9a9a2,
+                3px 3px 7px rgba(147, 149, 151, 0.671);
+
+        }
+
+
+        .content .text {
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 35px;
+            color: rgb(247, 233, 233);
+        }
+
+        .content .field {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .field input {
+            height: 100%;
+            width: 100%;
+            padding-left: 15px;
+            font-size: 18px;
+            outline: none;
+            border: none;
+            color: #e0d2d2;
+            border: 1px solid rgb(180, 219, 255);
+            border-radius: 8px;
+            background: rgba(115, 178, 219, 0.61);
+            box-shadow: -3px -3px 9px #aaa9a9a2,
+                3px 3px 7px rgba(147, 149, 151, 0.671);
+        }
+
+
+        .field input::placeholder {
+            color: #e0d2d2a6;
+        }
+
+        .field:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        .field span {
+            position: absolute;
+            width: 50px;
+            line-height: 50px;
+            color: #ffffff;
+        }
+
+
+
+        button {
+            margin: 25px 0 0 0;
+            width: 100%;
+            height: 50px;
+            color: rgb(238, 226, 226);
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.438);
+            border-radius: 8px;
+            background: rgba(105, 105, 105, 0);
+            margin-top: 40px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 8px;
+
+        }
+
+        .content .or {
+            color: rgba(255, 255, 255, 0.733);
+            margin-top: 9px;
+        }
+
+        .icon-button {
+            margin-top: 15px;
+        }
+
+        .icon-button span {
+            padding-left: 17px;
+            padding-right: 17px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: rgb(0 102 255);
+            border-radius: 5px;
+            line-height: 30px;
+            background: #b9eeff;
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover,
+        .icon-button span:hover {
+            background-color: #55b3c3a4;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        {{#if err}}
+        
+            Swal.fire({
+                icon: 'error',
+                title: '{{title}}',
+                html: "{{{text}}}",
+                confirmButtonText: 'OK',
+                width: 600,
+                padding: '1em',
+                color: '#716add',
+                background: '#fff url(/images/trees.png)',
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url('https://thumbs.gfycat.com/DiligentWastefulGavial-max-1mb.gif')
+                    left top
+                    no-repeat
+                    `
+            }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            document.getElementById("SignUp").click()
+                        }
+                    })
+        
+        {{/if}}
+
+                {{#if suc}}
+                    Swal.fire({
+                        icon: 'success',
+                        title: '{{title}}',
+                        html: "{{{text}}}",
+                        confirmButtonText: 'Home',
+                        width: 600,
+                        padding: '2em',
+                        color: '#716add',
+                        background: '#fff url(/images/trees.png)',
+                        backdrop: `
+                    rgba(0,0,123,0.4)
+                    url('https://media.giphy.com/media/CaS9NNso512WJ4po0t/giphy.gif')
+                    left top
+                    no-repeat
+                    `
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            document.getElementById("home").click()
+                        }
+                    })
+                
+
+                {{/if}}
+
+
+    </script>
+
+    <div class="content">
+        <div class="text">Sign up now</div>
+        <form action="/sign_up" method="POST">
+
+            <div class="field">
+                <input type="text" name="f_name" placeholder="First name" required="">
+            </div>
+
+            <div class="field">
+                <input type="text" name="l_name" placeholder="Last name">
+            </div>
+
+            <br>
+
+            <div class="text" style="font-size:20px;margin-bottom:10px">Gender</div>
+
+            <div style="color:white ;font-size:20px">
+                Male : <input type="radio" name="gender" value="Male" style="border: 10px;width: 20px;height: 15px;"
+                    required="">
+                Female :<input type="radio" name="gender" value="Female" style="border: 10px;width: 20px;height: 15px;"
+                    required="">
+            </div>
+
+            <br>
+
+            <div class="text" style="font-size:20px;margin-bottom:10px">
+
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required="">
+                
+                <font style="color: rgb(253, 47, 47);">NOTE</font> : PLEASE DON'T ENTER ANY VALID EMAIL ADDRESSES OR PASSWORDS
+            
+            </div>
+
+            <div class="field">
+                <input type="email" name="email" placeholder="Email Id" required="">
+            </div>
+
+            <br>
+
+            <div class="field">
+                <span class="fa fa-lock"></span>
+                <input style="padding-left: 45px;" type="password" name="password" placeholder="Password" required="">
+            </div>
+
+            <br>
+
+            <div class="field">
+                <span class="fa fa-lock"></span>
+                <input style="padding-left: 45px;" type="password" name="c_password" placeholder="Confirm Password"
+                    required="">
+            </div>
+
+            <button type="submit">Sign Up</button>
+            <br>
+            <div class="or">Or</div>
+        </form>
+        <div class="icon-button" style="display: flex;">
+
+            <button style="width: 50%;" onclick="window.location.href='/user_sign_in';">Sign In</button>
+            <pre>   </pre>
+
+            <button style="width: 50%;" id="home" onclick="window.location.href='/';">Home</button>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

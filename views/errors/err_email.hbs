@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existing Account</title>
+    <!-- <link src="/CODE/CODE/Courses/error.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/{{everything.err}}" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    {{!-- <iframe src="https://media.giphy.com/media/CaS9NNso512WJ4po0t/giphy.gif" width="480" height="270"
+        frameBorder="0" class="giphy-embed" allowFullScreen></iframe> --}}
+
+    <script>
+        {{#if err}}
+        
+            Swal.fire({
+                icon: 'error',
+                title: '{{title}}',
+                html: "{{{text}}}",
+                confirmButtonText: 'OK',
+                width: 600,
+                padding: '1em',
+                color: '#716add',
+                background: '#fff url(/images/trees.png)',
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url('https://thumbs.gfycat.com/DiligentWastefulGavial-max-1mb.gif')
+                    left top
+                    no-repeat
+                    `
+            }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            document.getElementById("SignUp").click()
+                        }
+                    })
+        
+        {{/if}}
+
+                {{#if suc}}
+                    Swal.fire({
+                        icon: 'success',
+                        title: '{{title}}',
+                        html: "{{{text}}}",
+                        confirmButtonText: 'OK',
+                        width: 600,
+                        padding: '2em',
+                        color: '#716add',
+                        background: '#fff url(/images/trees.png)',
+                        backdrop: `
+                    rgba(0,0,123,0.4)
+                    url('https://media.giphy.com/media/CaS9NNso512WJ4po0t/giphy.gif')
+                    left top
+                    no-repeat
+                    `
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            document.getElementById("SignUp").click()
+                        }
+                    })
+                
+
+                {{/if}}
+
+
+    </script>
+
+    <h1>Account with entered credentials already Exists</h1>
+    <p class="zoom-area">Visit<b> SignUp</b> page to register. </p>
+    <section class="error-container">
+        <span>4</span>
+        <span><span class="screen-reader-text">0</span></span>
+        <span>1</span>
+    </section>
+    <div class="link-container">
+        <a href="/" id="SignUp" class="more-link">Visit the Home Page</a>
+    </div>
+
+</body>
+
+</html>
