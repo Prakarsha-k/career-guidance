@@ -1,4 +1,3 @@
-Based on your request, here is the updated README file for the "Career Guidance Website" project, reflecting the use of Handlebars.
 
 # Career Guidance Website
 
